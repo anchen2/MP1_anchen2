@@ -4,10 +4,235 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
+        <title>Abigail Chen - UIUX Designer</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Cute+Dino&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="image/svg+xml" href="assets/heart.svg">
+
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <!-- NAVBAR -->
+        <nav id="navbar">
+            <a href="#">
+                <div class="logo" id="logo">
+                    <img src="assets/heart.svg" alt="heart icon" id="heart"/>
+                    <h1 id="name">Abigail Chen</h1>
+                </div>
+            </a>
+            <div class="nav-items" id="nav-text">
+                <a href="#UIUX">
+                    <h2 class="nav-item">UI/UX Design</h2>
+                </a>
+                <a href="#GraphicDesign">
+                    <h2 class="nav-item">Graphic Design</h2>
+                </a>
+                <a href="#About">
+                    <h2 class="nav-item">About</h2>
+                </a>
+                <a href="#Contact">
+                    <h2 class="nav-item">Contact</h2>
+                </a>
+            </div>
+        </nav>
+
+        <!-- VIDEO -->
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="assets/video.mp4" type="video/mp4">
+            </video>
+            <div class="video-text" >
+                <h2>Hello My Name is</h2>
+                <h1>Abigail Chen</h1>
+                <p>UI/UX | Graphic Design</p>
+            </div>
+        </div>
+
+
+        <!--  CAROUSEL help from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+        <div class="carousel">
+            <div class="slide">
+                <div class="slide-number"> 1/3 </div>
+                <img src="assets/DFAmockup.png" alt="IlliniSwap"/>
+                <div class="slide-text"> IlliniSwap </div>
+            </div>
+            
+            <div class="slide">
+                <div class="slide-number"> 2/3 </div>
+                <img src="assets/CyberSafariMockup2.png" alt="CyberSafari"/>
+                <div class="slide-text"> CyberSafari </div>
+            </div>  
+
+            <div class="slide">
+                <div class="slide-number"> 3/3 </div>
+                <img src="assets/CoverMockUP.png" alt="Power-Up Princess"/>
+                <div class="slide-text"> Power-Up Princess </div>
+            </div>  
+
+            <img class="left"  src="assets/leftarrow.svg" alt="left arrow icon"/>
+            <img class="right" src="assets/rightarrow.svg" alt="right arrow icon"/>
+        </div>
+        <br>
+        <div class="dots">
+            <span class="dot" id="dot1"></span>
+            <span class="dot" id="dot2"></span>
+            <span class="dot" id="dot3"></span>
+        </div>
+
+        <!-- Mini carousel - uiux -->
+        <!-- With modules help from https://www.w3schools.com/howto/howto_css_modals.asp -->
+        <section class="UIUX" id="UIUX">
+            <h1>UI/UX Design</h1>
+            <section class="mini-carousel">
+                <div class="track">
+                    <div class="item">
+                        <img class="popup-img" src="assets/DFAmockup.png" alt="IlliniSwap"/>
+                        <h2>IlliniSwap</h2>
+                    </div>
+
+                    <div class="item">
+                        <img class="popup-img" src="assets/CyberSafariMockup2.png" alt="CyberSafari"/>
+                        <h2>CyberSafari</h2>
+                    </div>
+
+                    <div class="item">
+                        <img class="popup-img" src="assets/knowyourflo-mockups.png" alt="Know Your Flo"/>
+                        <h2>Know Your Flo</h2>
+                    </div>
+
+                    <div class="item">
+                        <img class="popup-img" src="assets/ReadySetStampMockup.png" alt="Ready Set Stamp"/>
+                        <h2>Ready Set Stamp</h2>
+                    </div>
+                </div>
+
+                <img class="mini-left" src="assets/leftarrow.svg" alt="left arrow icon"/>
+                <img class="mini-right" src="assets/rightarrow.svg" alt="right arrow icon"/>
+            </section>
+        </section>
+
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+            <div id="caption"></div>
+        </div>
+
+        <!-- Mini carousel - graphic design -->
+        <section class="Graphic-Design" id="GraphicDesign">
+            <h1>Graphic Design</h1>
+
+            <section class="mini-carousel">
+                <div class="track">
+                    <div class="item">
+                        <img class="popup-img" src="assets/CoverMockUP.png" alt="Power-Up Princess"/>
+                        <h2>Power-Up Princess</h2>
+                    </div>
+
+                    <div class="item">
+                        <img class="popup-img" src="assets/All the screen Mockup.png" alt="Bubbly Glow Beauty"/>
+                        <h2>Bubbly Glow Beauty</h2>
+                    </div>
+
+                    <div class="item">
+                        <img class="popup-img" src="assets/postermockup.jpg" alt="Harmonious Wonders"/>
+                        <h2>Harmonious Wonders</h2>
+                    </div>
+
+                    <div class="item">
+                        <img class="popup-img" src="assets/postcardmockup1.png" alt="Emmet McBain"/>
+                        <h2>Emmet McBain</h2>
+                    </div>
+
+                    <div class="item">
+                        <img class="popup-img" src="assets/typepostermockup1.png" alt="MODU"/>
+                        <h2>MODU</h2>
+                    </div>
+
+                </div>
+
+                <img class="mini-left" src="assets/leftarrow.svg" alt="left arrow icon"/>
+                <img class="mini-right" src="assets/rightarrow.svg" alt="right arrow icon"/>
+            </section>
+        </section>
+
+        <div class="background-image">
+            <section class="About" id="About">
+                <h1>About Me</h1>
+                <div class="content">
+                    <div class="about-left">
+                        <img src="assets/Me.jpg" alt="profile picture"/>
+                        <div class="socials-icons">
+                            <a href="https://www.linkedin.com/in/anchen2" target="_blank">
+                                <img src="assets/linkedin-brands-solid-full.svg" alt="LinkedIn icon"/>
+                            </a>
+                            <a href="https://www.behance.net/abigailchen5" target="_blank">
+                                <img src="assets/behance-brands-solid-full.svg" alt="Behance icon"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <h1>Abigail (Abbie) Chen</h1>
+                        <h2>Graphic Design Major @ UIUC</h2>
+                        <p>Hi my name is Abbie Chen, I am a student at the University of Illinois Urbana-Champaign studying Graphic Design and minoring in Computer Science. I will be graduating in the Spring of 2026. </p>
+                        <p>Currently on campus I am a member of Design For America (DFA) a RSO that builds community projects through the Human Centered Design Process. Currently, I am a Co-Team lead for one of the Environmental Sustainability Team where we are developing a project that aims to reduce student waste. We have designed an app that gives students a space to buy and sell their old school supplies and unwanted clothing.</p>
+                        <p>My design processes values audience research and branding to solve challenges and provides Human Centered solutions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="three-boxes">
+                <div class="card">
+                    <img src="assets/heart.svg" alt="creativity icon"/>
+                    <h2>Creativity</h2>
+                </div>
+                <div class="card">
+                    <img src="assets/heart.svg" alt="problem solving icon"/>
+                    <h2>Problem Solving</h2>
+                </div>
+                <div class="card">
+                    <img src="assets/heart.svg" alt="team work icon"/>
+                    <h2>Team Work</h2>
+                </div>
+            </div>
+            <section class="Contact" id="Contact">
+                <div class="contact-left">
+                    <img src="assets/contact-photo.jpg" alt="Contact Image"/>
+                </div>
+                <div class="contact-right">
+                    <h1>Let's Work Together</h1>
+                    <h2>Say Hello</h2>
+                    <input type="text" placeholder="Your Name"/>
+                    <input type="email" placeholder="Your Email"/>
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit">Send</button>
+                </div>
+            </section>
+        </div>
+
+
+        <footer>
+            <h1>Abigail Chen</h1>
+            <div class="footer-section">
+                <h2>UI/UX Design</h2>
+                <p>IlliniSwap</p>
+                <p>CyberSafari</p>
+                <p>Know Yo Flow</p>
+            </div>
+            <div class="footer-section">
+                <h2>Graphic Design</h2>
+                <p>Power-Up Princess</p>
+                <p>Bubbly Glow Beauty</p>
+                <p>Harmonious Wonders</p>
+            </div>
+            <div class="footer-section">   
+                <h2>About</h2>
+                <h2>Contact</h2>
+            </div>
+            <p>© 2025 Abigail Chen. All rights reserved.</p>
+        </footer>
+
+        <script src="js/main.js"></script>
     </body>
 </html>

@@ -1,0 +1,522 @@
+/* Your SCSS here. */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F9F3FF;
+  color: #173D6C;
+  font-family: "Asap", sans-serif;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: "Cute Dino", serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 3em;
+}
+
+h2 {
+  font-family: "Asap", sans-serif, bold;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+p {
+  font-family: "Asap", sans-serif;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (min-width: 1574px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+  input, textarea {
+    font-size: 1.5em;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  background-color: #3971B8;
+  color: #F9F3FF;
+  padding: 1vh 2vw;
+  width: 80%;
+  margin: 1em auto;
+  border-radius: 100px;
+  position: sticky;
+  top: 1em;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+#heart {
+  width: 5vw;
+  height: 5vh;
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#name {
+  font-size: 2em;
+}
+
+.nav-items {
+  display: flex;
+  gap: 3vw;
+}
+
+.nav-item {
+  cursor: pointer;
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: #DD81DD;
+  color: #173D6C;
+  border-radius: 50px;
+}
+
+.nav-link.active {
+  background-color: #DD81DD;
+  color: #173D6C;
+  border-radius: 50px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -15vh;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.8);
+}
+
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F9F3FF;
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-text h1 {
+  font-size: 8em;
+}
+
+.video-text h2 {
+  font-size: 2em;
+}
+
+.video-text p {
+  font-size: 2em;
+}
+
+.carousel {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.left, .right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 3vw;
+  height: auto;
+  padding: 1vw;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.right {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.left:hover, .right:hover {
+  width: 3.5vw;
+  height: auto;
+}
+
+.slide-text {
+  color: #173D6C;
+  font-size: 3em;
+  font-family: "Cute Dino", serif;
+  padding: 0.5em 1em;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+}
+
+.slide-number {
+  color: #173D6C;
+  font-family: "Asap", sans-serif, bold;
+  font-weight: 800;
+  font-size: 2em;
+  padding: 0.2em 0.5em;
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+.dots {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #3971B8;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease-in-out;
+}
+
+.dot.active, .dot:hover {
+  background-color: #DD81DD;
+  height: 20px;
+  width: 20px;
+}
+
+.mini-carousel {
+  position: relative;
+  margin-bottom: 10vh;
+}
+
+.track {
+  display: flex;
+  gap: 2vw;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1vw 3vh;
+  scrollbar-width: none;
+}
+
+.UIUX h1 {
+  margin-left: 5vw;
+}
+
+.Graphic-Design h1 {
+  margin-left: 5vw;
+}
+
+.item {
+  flex: 0 0 auto;
+  text-align: center;
+  font-family: "Asap", sans-serif, bold;
+  font-weight: 800;
+}
+
+.item img {
+  width: 25vw;
+  height: 25vw;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.item img:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+.mini-left, .mini-right {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: 3vw;
+  height: auto;
+  padding: 1vw;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.mini-right {
+  right: 0;
+}
+
+.mini-left {
+  left: 0;
+}
+
+.mini-left:hover, .mini-right:hover {
+  width: 3.5vw;
+  height: auto;
+}
+
+.background-image {
+  background-image: url("../assets/backgroundPhoto.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 5vh 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: 10vh auto 5vh auto;
+  display: block;
+  width: 90%;
+  max-width: 50vw;
+  border-radius: 20px;
+}
+
+#caption {
+  margin: 10px auto;
+  text-align: center;
+  color: #F9F3FF;
+  font-family: "Cute Dino", serif;
+  font-size: 5em;
+}
+
+.close {
+  position: absolute;
+  top: 1vh;
+  right: 2vw;
+  color: #F9F3FF;
+  font-size: 4vw;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.About {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 5vh 5vw;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  background-color: #F9F3FF;
+  margin: 0 auto 5vh auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+}
+
+.about-left img {
+  width: 30vw;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 1vh;
+}
+
+.socials-icons {
+  display: flex;
+  gap: 0.5vw;
+  width: 6vw;
+  color: #DD81DD;
+}
+
+.socials-icons img {
+  width: 100%;
+  height: auto;
+  filter: invert(29%) sepia(83%) saturate(749%) hue-rotate(290deg) brightness(90%) contrast(85%);
+  transition: transform 0.3s ease;
+}
+
+.socials-icons img:hover {
+  transform: scale(1.2);
+  filter: invert(48%) sepia(83%) saturate(749%) hue-rotate(290deg) brightness(90%) contrast(85%);
+  cursor: pointer;
+}
+
+.three-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+  margin-top: 5vh;
+  background-color: #F9F3FF;
+  width: 80%;
+  padding: 5vh 5vw;
+  border-radius: 50px;
+  position: relative;
+  margin: 0 auto 5vh auto;
+}
+
+.card {
+  flex: 1;
+  text-align: center;
+  padding: 2vh 2vw;
+  border-radius: 20px;
+  color: #173D6C;
+}
+
+.Contact {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 5vh 0;
+  background-color: #F9F3FF;
+  color: #173D6C;
+  width: 80%;
+  padding: 5vh 5vw;
+  border-radius: 50px;
+  position: relative;
+  margin: 0 auto 5vh auto;
+}
+
+.contact-left img {
+  width: 30vw;
+  height: auto;
+  border-radius: 20px;
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+}
+
+.contact-right {
+  padding-top: 20vh;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+input, textarea {
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  margin: 0.5em 0;
+  border-radius: 20px;
+  border: none;
+  background-color: #EED6EE;
+  color: #173D6C;
+  font-family: "Asap", sans-serif;
+  font-size: 1em;
+  resize: vertical;
+}
+
+button {
+  width: 30%;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 20px;
+  border: none;
+  background-color: #DD81DD;
+  color: #F9F3FF;
+  font-family: "Asap", sans-serif, bold;
+  font-size: 1.2em;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3971B8;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 5vw;
+  background-color: #3971B8;
+  color: #F9F3FF;
+  font-family: "Asap", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=main.css.map */
